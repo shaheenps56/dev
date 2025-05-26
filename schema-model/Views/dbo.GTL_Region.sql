@@ -1,0 +1,8 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE VIEW [dbo].[GTL_Region] AS
+Select * From SPARCIM.dbo.GTL_Region (Nolock);
+
+GO

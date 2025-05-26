@@ -1,0 +1,18 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+
+
+CREATE   PROCEDURE [dbo].[RmsResetFlag] 
+AS
+BEGIN
+	insert into rmstestlog(spname,remarks)
+	values('RmsResetFlag','start')
+
+	UPDATE PORTFOLIO SET CHANGE_FLAG = 0 WHERE CHANGE_FLAG= 1
+
+	UPDATE SECURITY SET CHANGE_FLAG = 0 WHERE CHANGE_FLAG= 1
+END
+
+GO

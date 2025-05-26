@@ -1,0 +1,8 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE VIEW [dbo].[SPARC_SubBrokerMaster] AS
+Select * From SPARCIM.dbo.SPARC_SubBrokerMaster (Nolock);
+
+GO

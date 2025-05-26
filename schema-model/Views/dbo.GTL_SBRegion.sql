@@ -1,0 +1,8 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE VIEW [dbo].[GTL_SBRegion] AS
+Select * From SPARCIM.dbo.SPARC_SBRegion (Nolock);
+
+GO

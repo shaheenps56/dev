@@ -1,0 +1,7 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE View [dbo].[SPARC_Settings] AS
+Select * From SPARCIM.dbo.SPARC_Settings (Nolock);
+GO

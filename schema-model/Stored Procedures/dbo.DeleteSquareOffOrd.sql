@@ -1,0 +1,29 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+
+CREATE   PROCEDURE [dbo].[DeleteSquareOffOrd]
+    @USERCODE varchar(30),
+	@TRANSID int = 0,
+	@PORTFOLIO varchar(2)='N'
+AS
+BEGIN
+SET NOCOUNT ON
+
+	insert into rmstestlog(spname,remarks)
+	values('DeleteSquareOffOrd','start')
+
+	IF @PORTFOLIO='Y'
+	BEGIN
+		IF @usercode<>''
+			DELETE FROM SQUAREOFFPORTFOLIO where usercode=@usercode
+		ELSE
+			DELETE FROM SQUAREOFFPORTFOLIO 
+	END
+	ELSE
+		DELETE FROM SQUAREOFFORDERS WHERE ORDERINGUSERCODE = @USERCODE and TRANSID =@TRANSID
+
+END
+
+GO

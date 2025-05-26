@@ -1,0 +1,11 @@
+CREATE TABLE [dbo].[GTL_UserAuthorisation]
+(
+[COMPANYID] [numeric] (10, 0) NOT NULL,
+[GROUPID] [numeric] (10, 0) NOT NULL,
+[USERID] [numeric] (10, 0) NOT NULL,
+[EUSER] [nvarchar] (20) NULL,
+[LASTUPDATEDON] [datetime] NULL
+)
+GO
+ALTER TABLE [dbo].[GTL_UserAuthorisation] ADD CONSTRAINT [PK_AC_USERAUTHORISE] PRIMARY KEY CLUSTERED ([COMPANYID], [GROUPID], [USERID])
+GO

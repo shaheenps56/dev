@@ -1,0 +1,16 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+
+CREATE   PROCEDURE [dbo].[GetParentusers] 
+    @USERCODE varchar(30)
+AS
+BEGIN
+SET NOCOUNT ON
+insert into rmstestlog(spname,remarks)
+	values('GetParentusers','start')
+	SELECT PARENTUSERS FROM USERS(NOLOCK) WHERE USERCODE=@USERCODE;
+END
+
+GO

@@ -1,0 +1,8 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE VIEW [dbo].[SPARC_SBBranch] AS
+Select * From SPARCIM.dbo.SPARC_SBBranch (Nolock);
+
+GO
