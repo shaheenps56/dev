@@ -1,3 +1,0 @@
-[environments.development]
-url = "jdbc:sqlserver://192.168.29.225;databaseName=GTLFLY;encrypt=true;integratedSecurity=true;trustServerCertificate=true"
-displayName = "Development database"
