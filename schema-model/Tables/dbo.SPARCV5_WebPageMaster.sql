@@ -1,9 +1,0 @@
-CREATE TABLE [dbo].[SPARCV5_WebPageMaster]
-(
-[PageID] [int] NOT NULL,
-[Euser] [varchar] (25) NULL,
-[LastUpdatedOn] [datetime] NOT NULL CONSTRAINT [DF__SPARCV5_W__LastU__65C116E7] DEFAULT (getdate())
-)
-GO
-ALTER TABLE [dbo].[SPARCV5_WebPageMaster] ADD CONSTRAINT [PK__SPARCV5___C565B12411238AB7] PRIMARY KEY CLUSTERED ([PageID])
-GO

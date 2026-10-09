@@ -1,7 +1,0 @@
-SET QUOTED_IDENTIFIER ON
-GO
-SET ANSI_NULLS ON
-GO
-Create View [dbo].[SPARC_SBRegion] as
-Select * From SPARCIM.dbo.SPARC_SBRegion
-GO

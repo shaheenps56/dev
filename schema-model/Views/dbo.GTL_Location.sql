@@ -1,8 +1,0 @@
-SET QUOTED_IDENTIFIER ON
-GO
-SET ANSI_NULLS ON
-GO
-CREATE VIEW [dbo].[GTL_Location] AS
-Select * From SPARCIM.dbo.GTL_Location (Nolock);
-
-GO
